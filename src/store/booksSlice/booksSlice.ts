@@ -3,10 +3,12 @@ import { AppThunk, RootState } from '../store';
 import { FETCH_BOOKS, PUT_BOOKS, SEARCH_BOOKS, namespace } from './actionTypes';
 
 export interface Book {
+  id: string;
   title: string;
   author: string;
-  imageURl: string;
-  country: string;
+  thumbnailUrl: string;
+  genre: string;
+  description: string;
 }
 
 interface BooksState {
@@ -51,8 +53,6 @@ export const booksSlice = createSlice({
 export const fetchBooks = booksSlice.actions[FETCH_BOOKS];
 export const putBooks = booksSlice.actions[PUT_BOOKS];
 export const searchBooks = booksSlice.actions[SEARCH_BOOKS];
-
-console.log({ fetchBooks: fetchBooks.toString(), putBooks: putBooks.toString() });
 
 export const mockAPISuccessRequest = (books: Book[]): AppThunk => (dispatch) => {
   setTimeout(() => {
