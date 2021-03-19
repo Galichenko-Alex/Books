@@ -13,7 +13,7 @@ const useBooks = () => {
     dispatch(mockAPISuccessRequest(books));
   }, [dispatch]);
 
-  return [isLoading, visibleBooks];
+  return { isLoading, visibleBooks };
 };
 
 export default useBooks;

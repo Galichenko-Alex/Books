@@ -5,9 +5,11 @@ const useSearch = () => {
   const dispatch = useDispatch();
   const searchString = useSelector(selectSearchString);
 
-  const setSearchString = (value: string) => dispatch(searchBooks(value));
+  const setSearchString = (value: string) => {
+    dispatch(searchBooks(value));
+  };
 
-  return [setSearchString, searchString];
+  return { setSearchString, searchString };
 };
 
 export default useSearch;
