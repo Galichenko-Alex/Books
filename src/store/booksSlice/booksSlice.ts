@@ -54,10 +54,10 @@ export const fetchBooks = booksSlice.actions[FETCH_BOOKS];
 export const putBooks = booksSlice.actions[PUT_BOOKS];
 export const searchBooks = booksSlice.actions[SEARCH_BOOKS];
 
-export const mockAPISuccessRequest = (books: Book[]): AppThunk => (dispatch) => {
+export const mockAPISuccessResponse = (books: Book[]): AppThunk => (dispatch) => {
   setTimeout(() => {
     dispatch(putBooks(books));
-  }, 2000);
+  }, 3000);
 };
 
 export const selectSearchString = (state: RootState) => state[BOOKS_STATE_KEY].searchString;

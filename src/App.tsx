@@ -1,15 +1,21 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
-import './App.css';
-import Header from './components/Header/Header';
-import SideBar from './components/SideBar/SideBar';
+import Main from './containers/Main/Main';
+
+const useStyles = makeStyles({
+  app: {
+    minHeight: '100vh',
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <SideBar />
-      <Header />
-    </div>
+    <Grid direction="row" className={classes.app} container>
+      <Main />
+    </Grid>
   );
 }
 
