@@ -14,10 +14,10 @@ const useStyles = makeStyles({
     position: 'absolute',
     fontSize: '14px',
     color: 'white',
-    backgroundColor: 'black',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     padding: '5px 10px',
     borderRadius: '10px',
-    top: '185px',
+    top: '285px',
     right: '20px',
   },
 });

@@ -44,7 +44,7 @@ export const booksSlice = createSlice({
       state.isLoading = false;
       state.searchString = payload;
       state.visibleBooks = state.books.filter((book) => {
-        return Object.values(book).some((field: string) => field.includes(payload));
+        return Object.values(book).some((field: string) => field.toLowerCase().includes(payload.toLowerCase()));
       });
     },
   },

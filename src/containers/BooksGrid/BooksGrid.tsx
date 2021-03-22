@@ -8,8 +8,9 @@ import useBooks from '../../hooks/useBooks';
 const useStyles = makeStyles({
   bookGrid: {
     width: '100%',
+    height: '100%',
     display: 'grid',
-    gridTemplateColumns: 'auto auto auto auto auto',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
     gridGap: '25px',
     paddingTop: '25px',
     position: 'relative',
@@ -18,6 +19,7 @@ const useStyles = makeStyles({
   loaderSpinner: {
     position: 'absolute',
     left: '50%',
+    top: '200px',
   },
 });
 

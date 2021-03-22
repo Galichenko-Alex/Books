@@ -8,6 +8,7 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   root: {
     padding: '25px',
+    height: '100%',
   },
 });
 
